@@ -1,0 +1,24 @@
+{
+  "name": "data-visualisation",
+  "version": "1.0.0",
+  "description": "--- id: litvis ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gyryk/data-visualisation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gyryk/data-visualisation/issues"
+  },
+  "homepage": "https://github.com/Gyryk/data-visualisation#readme",
+  "dependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-elm": "^0.12.0"
+  }
+}

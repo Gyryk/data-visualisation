@@ -73,16 +73,48 @@ Create separate functions, that display the following, each in their own `r` cod
 {|task)}
 
 ```elm {l r}
--- Place your first name function here inside the code block.
+firstName : String
+firstName =
+    "Girik"
 ```
 
 ```elm {l r}
--- Place your last name function here inside the code block.
+lastName : String
+lastName =
+    "Agrawalla"
 ```
 
 ```elm {l r}
--- Place your commuting minutes function here inside the code block.
+commutingMinutes : Int
+commutingMinutes =
+    30
 ```
+
+I take the Tube to university, which takes about half an hour.
+
+```elm {l r}
+piTruncated : Float
+piTruncated =
+    3.141
+```
+
+I used 3.141 to cut off pi after three decimal places instead of rounding it.
+
+```elm {l r}
+visualizationQuote : String
+visualizationQuote =
+    "What does a visual treatment of some data or a task bring that could not be as effectively achieved by other means?"
+```
+
+Source: Jo Wood, [Session 1 lecture notes](../../lectures/session01/README.md#1-what-is-data-visualization).
+
+```elm {l r}
+choleraEpidemicYear : Int
+choleraEpidemicYear =
+    1854
+```
+
+The Broad Street cholera outbreak was in **1854**. Source: [John Snow's investigation, reproduced by UCLA](https://epi-snow.ph.ucla.edu/Stream2_BSPoutbreak_d.html).
 
 ## 1.2. Simple functions with operators
 
@@ -110,3 +142,43 @@ Create functions to calculate the following and show their output in litvis with
 - The mean (average) of the even numbers from 2 to 10.
 
 {|task)}
+
+```elm {l r}
+productOneToSix : Int
+productOneToSix =
+    1 * 2 * 3 * 4 * 5 * 6
+```
+
+Multiplying the numbers from 1 to 6 gives **720**.
+
+```elm {l r}
+secondsIn1923 : Int
+secondsIn1923 =
+    365 * 24 * 60 * 60
+```
+
+1923 was not a leap year, so I used 365 days and multiplied by the hours, minutes and seconds in each day. This gives **31,536,000 seconds**.
+
+```elm {l r}
+divisionResult : Float
+divisionResult =
+    377 / 120
+```
+
+I used `/` so that the result includes the decimal part, giving about **3.1416666666666666**. Using `//` would only give 3.
+
+```elm {l r}
+jamesBondName : String
+jamesBondName =
+    lastName ++ ", " ++ firstName ++ " " ++ lastName
+```
+
+I joined the first and last name functions from section 1.1 to get **Agrawalla, Girik Agrawalla**.
+
+```elm {l r}
+meanEvenNumbers : Float
+meanEvenNumbers =
+    (2 + 4 + 6 + 8 + 10) / 5
+```
+
+I added the five even numbers together and divided by 5. The total is 30, so the average is **6**.

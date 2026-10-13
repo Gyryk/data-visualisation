@@ -74,7 +74,9 @@ When viewing these notes in [litvis](#2-literate-visualization-and-litvis) to ca
 
 {(annotation|}
 
-Add your 5-point critique here:
+I wrote my five-point critique of Alvin Chang's *30 minutes with a stranger* in [Q.2 of my practical exercises](../../portfolio/session01/practicalExercises.md#q2-datavis-evaluation).
+
+I do not think a visualization automatically fails just because it is not interactive. These are common features, rather than five things every visualization must have. I would look at whether it helps someone understand the data or compare things, rather than just making it look nicer.
 
 {|annotation)}
 
@@ -114,7 +116,9 @@ Spend 30 seconds looking at the image below and see if you can use it to infer t
 
 {(annotation|}
 
-Add your initial observations about the data represented by those lines here.
+Most of the lines look similar in length, but some seem longer than others. They are scattered in different directions and overlap, which makes them hard to compare. I cannot easily tell the average or which are the shortest and longest. Some of the apparent differences might just come from the angle or overlap.
+
+If these represent student marks, I would line them up from the same starting point and sort them by length so that the differences are easier to see. This would also make groups of similar marks and unusually high or low marks more obvious. Without a scale or labels, I could compare the lengths but would not know the exact marks. Overlapping lines do not necessarily mean the data is related.
 
 {|annotation)}
 
@@ -332,6 +336,14 @@ What explains the darker bars during 2020? Can you say anything else about the r
 
 {|task)}
 
+{(annotation|}
+
+The darker bars mean that bikes were hired for longer on average. In April, May and June 2020, the averages were 36, 35 and 32 minutes. This could be because people were using bikes for different reasons during the COVID-19 restrictions. However, the chart alone cannot prove that.
+
+More hires do not always mean longer trips. April 2020 has 591,294 hires with an average of 36 minutes, while May has 1,121,435 hires with an average of 35 minutes. I used a [scatterplot in Q.4](../../portfolio/session01/practicalExercises.md#q4-creating-a-scatterplot) to make the comparison easier.
+
+{|annotation)}
+
 {(infobox|}
 
 You may have noticed the links in these notes to documentation describing various _elm-vegalite_ functions. I recommend bookmarking this [VegaLite API documentation page](https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite) as it is a valuable resource for customising your litvis visualization specifications. You may also find it useful to bookmark [Elm's core API documentation page](https://package.elm-lang.org/packages/elm/core/latest/).
@@ -369,6 +381,14 @@ The GoG is useful because it identifies the steps we have to go through to fully
 It is not a perfect model, for example, the original GoG does not mention how interaction may be incorporated into a specification, nor how multiple views may be combined in a single visualization. We will consider how Vega-Lite (and litvis) has extended the grammar to incorporate these in later sessions, but if you would like a look-ahead, see this [OpenVis video presentation](https://youtu.be/9uaHRWj04D4) from the Vega-Lite team.
 
 A note on _aesthetics_: Wilkinson identifies the last transformation "aesthetics" as the mapping of spatially embedded transformations of data into some perceivable form. That is, the transformation of the non-graphic into the graphic (or auditory or olfactory).
+
+{(annotation|}
+
+For my bicycle hires charts, the **what** is the month, number of hires and average hire duration. The **why** is to compare seasonal patterns and see which months stand out. The **how** is using Vega-Lite to make a bar chart and a scatterplot.
+
+For the Grammar of Graphics, I start with the CSV data. **Variables** selects Month and NumberOfHires, and **algebra** pairs them together. **Scales** maps them to the display ranges. **Statistics** does not change anything here because the monthly totals are already in the data. **Geometry** creates the bars, **coordinates** places them on Cartesian axes, and **aesthetics** makes the bars and axes visible. In the second bar chart, colour also shows the average hire duration.
+
+{|annotation)}
 
 Other have argued that "aesthetics" is more than this. For example, Ge Wang, in his book _Artful Design_ says
 

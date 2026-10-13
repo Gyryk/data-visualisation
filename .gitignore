@@ -6,3 +6,4 @@ repl-temp-*
 .DS_Store
 
 .vs/
+node_modules/
